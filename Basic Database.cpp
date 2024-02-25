@@ -103,10 +103,10 @@ void DeleteEmployers() {
     std::cout << "Employer Id: ";
     int Id;
     std::cin >> Id;
-    Id--; // Enganar o cara
+    Id--; // Botar -1 no id do employer, pra iniciar no 1
 
     std::memmove(&Infos[Id], &Infos[Id + 1], sizeof(Employers) * (30 - Id - 1));
-    CurrentEmployers--; // Como deletou o funcionário, diminua os funcionários atuais
+    CurrentEmployers--;
 }
 
 int main() {
